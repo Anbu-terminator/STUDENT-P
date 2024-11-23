@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="/js/script.js"></script>    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Student Profile</h2>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title"><%= student.name %></h4>
+                <p><strong>Date of Birth:</strong> <%= student.DateofBirth %></p>
+                <p><strong>Gender:</strong> <%= student.gender %></p>
+                <p><strong>Nation:</strong> <%= student.nation %></p>
+                <p><strong>Father's Name:</strong> <%= student.fatherName %></p>
+                <p><strong>Mother's Name:</strong> <%= student.motherName %></p>
+                <p><strong>Address:</strong> <%= student.address %></p>
+                <p><strong>City:</strong> <%= student.city %></p>
+                <p><strong>State:</strong> <%= student.state %></p>
+                <p><strong>Country:</strong> <%= student.country %></p>
+                <p><strong>Aadhar:</strong> <%= student.aadhar %></p>
+                <p><strong>Email:</strong> <%= student.email %></p>
+                <p><strong>Phone:</strong> <%= student.phone %></p>
+                <p><strong>PIN Code:</strong> <%= student.pin %></p>
+                <p><strong>Education:</strong> <%= student.education %></p>
+                <p><strong>Previous Institution:</strong> <%= student.previous %></p>
+                <p><strong>Skills:</strong> <%= student.skills %></p>
+                <p><strong>Course:</strong> <%= student.course %></p>
+                <p><strong>Mode:</strong> <%= student.mode %></p>
+                <p><strong>Time:</strong> <%= student.time %></p>
+                <p><strong>Duration:</strong> <%= student.duration %></p>
+                <p><strong>Fees:</strong> <%= student.fees %></p>
+                <p><strong>Offer:</strong> <%= student.offer %></p>
+                <a href="#" class="btn btn-success mt-3">Download Profile</a>
+                <a href="/fees?email=<%= student.email %>&DateofBirth=<%= student.DateofBirth %>">View Fees Due</a>
+            </div>
+</body>
+</html>

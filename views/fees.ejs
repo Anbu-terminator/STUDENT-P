@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h1 {
+      color: #333;
+    }
+    .profile, .fees-table {
+      margin: 20px 0;
+    }
+    .fees-table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .fees-table th, .fees-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    .fees-table th {
+      background-color: #007BFF;
+      color: white;
+    }
+    .fees-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .fees-table tr:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Profile</h1>
+    <div class="profile">
+      <p><strong>Name:</strong> <%= student.name %></p>
+      <p><strong>Email:</strong> <%= student.email %></p>
+      <p><strong>Date of Birth:</strong> <%= student.DateofBirth %></p>
+      <p><strong>Gender:</strong> <%= student.gender %></p>
+      <p><strong>Course:</strong> <%= student.course %></p>
+      <p><strong>Duration:</strong> <%= student.duration %></p>
+    </div>
+
+    <% if (feesData) { %>
+      <h2>Fees Details</h2>
+      <table class="fees-table">
+        <thead>
+          <tr>
+            <th>Last Paid Date</th>
+            <th>Fees Due (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= feesData.lastPaidDate %></td>
+            <td>₹<%= feesData.feesDue %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% } else { %>
+      <p>No fees details available for this student.</p>
+    <% } %>
+  </div>
+</body>
+</html>
